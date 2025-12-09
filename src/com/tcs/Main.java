@@ -74,7 +74,7 @@ public class Main {
                     break;
 
                 case 4:
-                    System.out.println("Thank you for using this application 😊");
+                    System.out.println("Thank you for using this application");
                     return;
 
                 default:
