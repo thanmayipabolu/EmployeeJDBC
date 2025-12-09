@@ -80,7 +80,7 @@ public class Employee {
             ps2.setString(2, name);
             ps2.executeUpdate();
 
-            System.out.println("Salary updated successfully ✅");
+            System.out.println("Salary updated successfully ");
 
         } catch (Exception e) {
             System.out.println("Error updating salary");
