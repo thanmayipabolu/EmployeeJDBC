@@ -10,14 +10,14 @@ public class Employee {
             con = DriverManager.getConnection(
                 "jdbc:mysql://localhost:3306/employeeDB",
                 "root",
-                "Root123$"   // your MySQL password
+                "Root123$"  
             );
         } catch (Exception e) {
             System.out.println("Database connection failed");
         }
     }
 
-    // CREATE EMPLOYEE
+   
     public void createEmployee(String name, int age, String desig, double salary) {
         try {
             String sql = "INSERT INTO employee VALUES (?, ?, ?, ?)";
@@ -33,7 +33,7 @@ public class Employee {
         }
     }
 
-    // DISPLAY EMPLOYEE
+   
     public void displayEmployee() {
         try {
             String sql = "SELECT * FROM employee";
@@ -46,7 +46,7 @@ public class Employee {
             }
 
             do {
-                System.out.println("----- Employee Details -----");
+                System.out.println("Employee Details");
                 System.out.println("Name: " + rs.getString("name"));
                 System.out.println("Age: " + rs.getInt("age"));
                 System.out.println("Designation: " + rs.getString("designation"));
@@ -58,7 +58,7 @@ public class Employee {
         }
     }
 
-    // RAISE SALARY
+    
     public void raiseSalary(String name, double percent) {
         try {
             String fetch = "SELECT salary FROM employee WHERE name=?";
